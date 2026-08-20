@@ -1,0 +1,95 @@
+export type ToolStatus = "live" | "planned";
+
+export type Tool = {
+  slug: string;
+  name: string;
+  /** short line used in cards, sidebar tooltips and the command palette */
+  tagline: string;
+  /** extra words the Cmd+K search should match on */
+  keywords: string[];
+  category: "CSS" | "Layout" | "Images" | "Suite";
+  status: ToolStatus;
+  /** emoji glyph — cheap, no icon dependency */
+  glyph: string;
+  /** original standalone deployment, kept for reference during migration */
+  legacyUrl?: string;
+};
+
+export const tools: Tool[] = [
+  {
+    slug: "stripe-generator",
+    name: "Stripe Generator",
+    tagline: "Repeating linear-gradient stripes with drag-to-reorder colours.",
+    keywords: ["stripes", "repeating", "linear", "gradient", "pattern", "background"],
+    category: "CSS",
+    status: "live",
+    glyph: "🎨",
+  },
+  {
+    slug: "flexbox-generator",
+    name: "Flexbox Generator",
+    tagline: "Visual flex container and item playground.",
+    keywords: ["flex", "justify", "align", "wrap", "layout"],
+    category: "Layout",
+    status: "planned",
+    glyph: "📐",
+  },
+  {
+    slug: "grid-playground",
+    name: "Grid Playground",
+    tagline: "Build CSS grid templates and named areas by hand.",
+    keywords: ["grid", "template", "areas", "columns", "rows"],
+    category: "Layout",
+    status: "planned",
+    glyph: "🔲",
+  },
+  {
+    slug: "css-clip-path",
+    name: "CSS Clip Path",
+    tagline: "Draw polygon and shape clip-paths on a live preview.",
+    keywords: ["clip", "path", "polygon", "shape", "mask"],
+    category: "CSS",
+    status: "planned",
+    glyph: "✂️",
+  },
+  {
+    slug: "gradient-editor",
+    name: "Gradient Editor",
+    tagline: "Multi-stop linear, radial and conic gradients.",
+    keywords: ["gradient", "linear", "radial", "conic", "stops", "colour"],
+    category: "CSS",
+    status: "planned",
+    glyph: "🌈",
+  },
+  {
+    slug: "neumorphism-shadow",
+    name: "Neumorphism Shadow",
+    tagline: "Soft-UI box-shadow pairs with light source control.",
+    keywords: ["neumorphism", "shadow", "soft", "box-shadow", "inset"],
+    category: "CSS",
+    status: "planned",
+    glyph: "🫧",
+  },
+  {
+    slug: "watermark-editor",
+    name: "Watermark Editor",
+    tagline: "Batch watermark images right in the browser.",
+    keywords: ["watermark", "photo", "image", "canvas", "batch"],
+    category: "Images",
+    status: "planned",
+    glyph: "🖼️",
+  },
+  {
+    slug: "all-in-one-suite",
+    name: "All-in-One Suite",
+    tagline: "The grab-bag of smaller developer utilities.",
+    keywords: ["suite", "utilities", "misc", "sp-tools"],
+    category: "Suite",
+    status: "planned",
+    glyph: "🧰",
+  },
+];
+
+export const liveTools = () => tools.filter((t) => t.status === "live");
+
+export const findTool = (slug: string) => tools.find((t) => t.slug === slug);
