@@ -346,7 +346,7 @@ export function StripeGenerator() {
       </div>
 
       {/* preview + export */}
-      <div className="space-y-5 lg:sticky lg:top-20 lg:self-start">
+      <div className="space-y-5">
         <section className="rounded-xl border border-border-soft bg-surface p-5">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
             <Label>Preview</Label>
