@@ -1,3 +1,5 @@
+export { canvasToBlob } from "@/lib/canvas";
+
 import {
   findPreset,
   type ComposerConfig,
@@ -349,10 +351,4 @@ export function renderToCanvas(
   ctx.scale(scale, scale);
   render(ctx, config, fonts, image);
   return canvas;
-}
-
-export function canvasToBlob(canvas: HTMLCanvasElement, type: string, quality?: number) {
-  return new Promise<Blob | null>((resolve) =>
-    canvas.toBlob((blob) => resolve(blob), type, quality),
-  );
 }
