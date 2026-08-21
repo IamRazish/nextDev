@@ -7,7 +7,7 @@ export type Tool = {
   tagline: string;
   /** extra words the Cmd+K search should match on */
   keywords: string[];
-  category: "CSS" | "Layout" | "Images";
+  category: "CSS" | "Layout" | "Images" | "Analyse";
   status: ToolStatus;
   /** emoji glyph — cheap, no icon dependency */
   glyph: string;
@@ -90,6 +90,25 @@ export const tools: Tool[] = [
     category: "CSS",
     status: "live",
     glyph: "🫧",
+  },
+  {
+    slug: "css-duplicate-checker",
+    name: "CSS Duplicate Checker",
+    tagline: "Find duplicate selectors and properties, and see which one wins.",
+    keywords: [
+      "duplicate",
+      "lint",
+      "audit",
+      "scss",
+      "less",
+      "selector",
+      "override",
+      "merge",
+      "dead code",
+    ],
+    category: "Analyse",
+    status: "live",
+    glyph: "🔍",
   },
   {
     slug: "code-to-image",

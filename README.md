@@ -44,6 +44,14 @@ npm run build
 | Neumorphism Shadow | `/tools/neumorphism-shadow` | ✅ ported |
 | Watermark Editor | `/tools/watermark-editor` | ✅ ported |
 
+From `spFrontEnd`:
+
+| Tool | Route | Status |
+| --- | --- | --- |
+| CSS3 Generator | `/tools/css3-generator` | ✅ ported (Flexbox tab excluded — see above) |
+| Code to Image | `/tools/code-to-image` | ✅ ported |
+| CSS Duplicate Checker | `/tools/css-duplicate-checker` | ✅ ported |
+
 The standalone `sp-tools` grab-bag is not a separate route: its utilities are
 covered by the seven tools above, and the home grid plus the ⌘K palette already
 do the "one place for everything" job it existed for.

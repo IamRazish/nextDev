@@ -7,7 +7,7 @@ import { tools, type Tool } from "@/lib/tools";
 import { ThemeToggle } from "./ThemeToggle";
 import { CommandPalette } from "./CommandPalette";
 
-const categories: Tool["category"][] = ["CSS", "Layout", "Images"];
+const categories: Tool["category"][] = ["CSS", "Layout", "Images", "Analyse"];
 
 function SidebarLinks({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();

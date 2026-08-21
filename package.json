@@ -11,6 +11,9 @@
   "dependencies": {
     "html-to-image": "^1.11.13",
     "next": "15.5.23",
+    "postcss": "^8.5.26",
+    "postcss-less": "^6.0.0",
+    "postcss-scss": "^4.0.9",
     "prismjs": "^1.30.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
