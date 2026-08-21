@@ -73,10 +73,20 @@ export const tools: Tool[] = [
   {
     slug: "watermark-editor",
     name: "Watermark Editor",
-    tagline: "Batch watermark images right in the browser.",
-    keywords: ["watermark", "photo", "image", "canvas", "batch"],
+    tagline: "Compose text images and stamp them with a watermark.",
+    keywords: [
+      "watermark",
+      "photo",
+      "image",
+      "canvas",
+      "text",
+      "urdu",
+      "social",
+      "instagram",
+      "tiktok",
+    ],
     category: "Images",
-    status: "planned",
+    status: "live",
     glyph: "🖼️",
   },
   {

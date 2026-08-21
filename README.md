@@ -19,6 +19,7 @@ npm run build
 | `src/components/ui/` | Shared primitives: export tabs, code block, copy button, colour/number fields, toasts |
 | `src/hooks/` | `useLocalStorage`, `useHistory` (rolling "recent designs" per tool) |
 | `src/lib/zip.ts` | Dependency-free store-only ZIP writer, for multi-file exports |
+| `src/lib/fonts.ts` | The eight next/font families the canvas composer draws with |
 | `src/components/tools/<slug>/` | One folder per tool: pure logic in a `.ts` file, UI in a `.tsx` |
 | `src/app/tools/<slug>/page.tsx` | Route + per-tool metadata |
 | `src/app/tools/[slug]/page.tsx` | "Coming soon" fallback for registry entries not ported yet |
@@ -41,5 +42,5 @@ npm run build
 | CSS Clip Path | `/tools/css-clip-path` | ✅ ported |
 | Gradient Editor | `/tools/gradient-editor` | ✅ ported |
 | Neumorphism Shadow | `/tools/neumorphism-shadow` | ✅ ported |
-| Watermark Editor | `/tools/watermark-editor` | planned |
+| Watermark Editor | `/tools/watermark-editor` | ✅ ported |
 | All-in-One Suite | `/tools/all-in-one-suite` | planned |
