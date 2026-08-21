@@ -70,8 +70,8 @@ export function Slider({
       max={max}
       step={step}
       onChange={(e) => onChange(e.target.valueAsNumber)}
-      className="h-1.5 w-full cursor-pointer appearance-none rounded-full bg-surface-2 accent-[var(--accent)]"
-      style={{ accentColor: "var(--accent)" }}
+      className="h-1.5 w-full min-w-16 cursor-pointer appearance-none rounded-full"
+      style={{ accentColor: "var(--accent)", background: "var(--border)" }}
     />
   );
 }
@@ -130,5 +130,58 @@ export function Toggle({
       </button>
       {children}
     </label>
+  );
+}
+
+export function Select<T extends string>({
+  value,
+  onChange,
+  options,
+  className = "",
+}: {
+  value: T;
+  onChange: (v: T) => void;
+  options: readonly T[];
+  className?: string;
+}) {
+  return (
+    <select
+      value={value}
+      onChange={(e) => onChange(e.target.value as T)}
+      className={`w-full appearance-none rounded-md border border-border-soft bg-surface px-2.5 py-2 text-sm text-fg outline-none transition focus:border-accent focus-visible:ring-2 focus-visible:ring-ring-soft ${className}`}
+    >
+      {options.map((o) => (
+        <option key={o} value={o}>
+          {o}
+        </option>
+      ))}
+    </select>
+  );
+}
+
+export function TextField({
+  value,
+  onChange,
+  placeholder,
+  invalid = false,
+  className = "",
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  placeholder?: string;
+  invalid?: boolean;
+  className?: string;
+}) {
+  return (
+    <input
+      type="text"
+      value={value}
+      placeholder={placeholder}
+      onChange={(e) => onChange(e.target.value)}
+      aria-invalid={invalid || undefined}
+      className={`w-full rounded-md border bg-surface px-2.5 py-2 text-sm text-fg outline-none transition focus-visible:ring-2 focus-visible:ring-ring-soft ${
+        invalid ? "border-red-500 text-red-500" : "border-border-soft focus:border-accent"
+      } ${className}`}
+    />
   );
 }

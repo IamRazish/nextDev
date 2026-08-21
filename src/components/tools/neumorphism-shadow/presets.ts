@@ -1,0 +1,83 @@
+import { DEFAULT_CONFIG, type NeuConfig } from "./neumorphism";
+
+const preset = (name: string, hint: string, patch: Partial<NeuConfig>) => ({
+  name,
+  hint,
+  config: { ...DEFAULT_CONFIG, ...patch },
+});
+
+export const presetLibrary = [
+  preset("Classic card", "The default soft-UI panel", {
+    baseColor: "#e0e0e0",
+    shape: "flat",
+    size: 250,
+    radius: 24,
+    distance: 12,
+    blur: 24,
+    intensity: 0.15,
+  }),
+  preset("Raised button", "Small, tight radius, short throw", {
+    baseColor: "#e6e7ee",
+    shape: "convex",
+    size: 140,
+    radius: 16,
+    distance: 6,
+    blur: 12,
+    intensity: 0.12,
+  }),
+  preset("Pressed input", "Inset shadows — the field-in-a-panel look", {
+    baseColor: "#e6e7ee",
+    shape: "pressed",
+    size: 220,
+    radius: 14,
+    distance: 5,
+    blur: 10,
+    intensity: 0.13,
+  }),
+  preset("Concave dish", "Light catches the lower edge", {
+    baseColor: "#dfe6f2",
+    shape: "concave",
+    size: 240,
+    radius: 40,
+    distance: 12,
+    blur: 22,
+    intensity: 0.14,
+  }),
+  preset("Pebble", "Full round, wide blur", {
+    baseColor: "#e4e6ec",
+    shape: "convex",
+    size: 200,
+    radius: 100,
+    distance: 14,
+    blur: 34,
+    intensity: 0.16,
+  }),
+  preset("Dark panel", "Soft UI that survives a dark theme", {
+    baseColor: "#2e333c",
+    shape: "flat",
+    size: 250,
+    radius: 22,
+    distance: 10,
+    blur: 22,
+    intensity: 0.3,
+  }),
+  preset("Warm sand", "Coloured base, low contrast", {
+    baseColor: "#efe4d3",
+    shape: "convex",
+    size: 230,
+    radius: 28,
+    distance: 10,
+    blur: 20,
+    intensity: 0.13,
+  }),
+  preset("Lit from below", "Light source flipped to bottom-right", {
+    baseColor: "#e0e0e0",
+    shape: "convex",
+    lightSource: "bottom-right",
+    size: 230,
+    radius: 26,
+    distance: 11,
+    blur: 22,
+    intensity: 0.15,
+  }),
+];
