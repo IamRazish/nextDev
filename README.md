@@ -18,6 +18,7 @@ npm run build
 | `src/components/shell/` | App shell: sidebar, top bar, theme toggle, command palette |
 | `src/components/ui/` | Shared primitives: export tabs, code block, copy button, colour/number fields, toasts |
 | `src/hooks/` | `useLocalStorage`, `useHistory` (rolling "recent designs" per tool) |
+| `src/lib/zip.ts` | Dependency-free store-only ZIP writer, for multi-file exports |
 | `src/components/tools/<slug>/` | One folder per tool: pure logic in a `.ts` file, UI in a `.tsx` |
 | `src/app/tools/<slug>/page.tsx` | Route + per-tool metadata |
 | `src/app/tools/[slug]/page.tsx` | "Coming soon" fallback for registry entries not ported yet |
@@ -35,10 +36,10 @@ npm run build
 | Tool | Route | Status |
 | --- | --- | --- |
 | Stripe Generator | `/tools/stripe-generator` | ✅ ported |
-| Flexbox Generator | `/tools/flexbox-generator` | planned |
-| Grid Playground | `/tools/grid-playground` | planned |
-| CSS Clip Path | `/tools/css-clip-path` | planned |
-| Gradient Editor | `/tools/gradient-editor` | planned |
-| Neumorphism Shadow | `/tools/neumorphism-shadow` | planned |
+| Flexbox Generator | `/tools/flexbox-generator` | ✅ ported |
+| Grid Playground | `/tools/grid-playground` | ✅ ported |
+| CSS Clip Path | `/tools/css-clip-path` | ✅ ported |
+| Gradient Editor | `/tools/gradient-editor` | ✅ ported |
+| Neumorphism Shadow | `/tools/neumorphism-shadow` | ✅ ported |
 | Watermark Editor | `/tools/watermark-editor` | planned |
 | All-in-One Suite | `/tools/all-in-one-suite` | planned |
