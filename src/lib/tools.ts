@@ -7,7 +7,7 @@ export type Tool = {
   tagline: string;
   /** extra words the Cmd+K search should match on */
   keywords: string[];
-  category: "CSS" | "Layout" | "Images";
+  category: "CSS" | "Layout" | "Images" | "Analyse";
   status: ToolStatus;
   /** emoji glyph — cheap, no icon dependency */
   glyph: string;
@@ -24,6 +24,27 @@ export const tools: Tool[] = [
     category: "CSS",
     status: "live",
     glyph: "🎨",
+  },
+  {
+    slug: "css3-generator",
+    name: "CSS3 Generator",
+    tagline: "Eleven single-property generators with a live preview each.",
+    keywords: [
+      "border-radius",
+      "box-shadow",
+      "text-shadow",
+      "rgba",
+      "transform",
+      "transition",
+      "column",
+      "resize",
+      "box-sizing",
+      "outline",
+      "css3",
+    ],
+    category: "CSS",
+    status: "live",
+    glyph: "🧪",
   },
   {
     slug: "flexbox-generator",
@@ -69,6 +90,43 @@ export const tools: Tool[] = [
     category: "CSS",
     status: "live",
     glyph: "🫧",
+  },
+  {
+    slug: "css-duplicate-checker",
+    name: "CSS Duplicate Checker",
+    tagline: "Find duplicate selectors and properties, and see which one wins.",
+    keywords: [
+      "duplicate",
+      "lint",
+      "audit",
+      "scss",
+      "less",
+      "selector",
+      "override",
+      "merge",
+      "dead code",
+    ],
+    category: "Analyse",
+    status: "live",
+    glyph: "🔍",
+  },
+  {
+    slug: "code-to-image",
+    name: "Code to Image",
+    tagline: "Turn a snippet into a shareable, syntax-highlighted image.",
+    keywords: [
+      "code",
+      "screenshot",
+      "snippet",
+      "carbon",
+      "syntax",
+      "highlight",
+      "share",
+      "png",
+    ],
+    category: "Images",
+    status: "live",
+    glyph: "📸",
   },
   {
     slug: "watermark-editor",

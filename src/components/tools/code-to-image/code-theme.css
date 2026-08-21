@@ -1,0 +1,118 @@
+/*
+ * Token palettes for the Code to Image tool.
+ *
+ * The standalone version imported prism-tomorrow.css and then forced a dark
+ * editor background even when "Light" was selected, so the theme switch only
+ * moved the window chrome. These two palettes are real, and the swatch colours
+ * live here rather than in a vendor stylesheet so both themes can ship.
+ */
+
+.code-shot {
+  --code-bg: #1e1f26;
+  --code-fg: #e4e6ef;
+  --code-chrome: #171820;
+  --code-gutter: #6a6f82;
+  --code-comment: #7c8296;
+  --code-punctuation: #b9bed1;
+  --code-keyword: #c792ea;
+  --code-string: #c3e88d;
+  --code-number: #f78c6c;
+  --code-function: #82aaff;
+  --code-class: #ffcb6b;
+  --code-operator: #89ddff;
+  --code-variable: #f07178;
+}
+
+.code-shot[data-code-theme="light"] {
+  --code-bg: #fafafa;
+  --code-fg: #383a42;
+  --code-chrome: #eaeaec;
+  --code-gutter: #9d9fa6;
+  --code-comment: #a0a1a7;
+  --code-punctuation: #4f525d;
+  --code-keyword: #a626a4;
+  --code-string: #50a14f;
+  --code-number: #b76b01;
+  --code-function: #4078f2;
+  --code-class: #c18401;
+  --code-operator: #0184bc;
+  --code-variable: #e45649;
+}
+
+.code-shot pre,
+.code-shot code {
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-shadow: none;
+}
+
+.code-shot .token.comment,
+.code-shot .token.prolog,
+.code-shot .token.doctype,
+.code-shot .token.cdata {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.code-shot .token.punctuation {
+  color: var(--code-punctuation);
+}
+
+.code-shot .token.property,
+.code-shot .token.tag,
+.code-shot .token.constant,
+.code-shot .token.symbol,
+.code-shot .token.deleted {
+  color: var(--code-variable);
+}
+
+.code-shot .token.boolean,
+.code-shot .token.number {
+  color: var(--code-number);
+}
+
+.code-shot .token.selector,
+.code-shot .token.attr-name,
+.code-shot .token.string,
+.code-shot .token.char,
+.code-shot .token.builtin,
+.code-shot .token.inserted {
+  color: var(--code-string);
+}
+
+.code-shot .token.operator,
+.code-shot .token.entity,
+.code-shot .token.url,
+.code-shot .token.variable {
+  color: var(--code-operator);
+}
+
+.code-shot .token.atrule,
+.code-shot .token.attr-value,
+.code-shot .token.function {
+  color: var(--code-function);
+}
+
+.code-shot .token.class-name {
+  color: var(--code-class);
+}
+
+.code-shot .token.keyword {
+  color: var(--code-keyword);
+}
+
+.code-shot .token.regex,
+.code-shot .token.important {
+  color: var(--code-number);
+}
+
+.code-shot .token.important,
+.code-shot .token.bold {
+  font-weight: 700;
+}
+
+.code-shot .token.italic {
+  font-style: italic;
+}
