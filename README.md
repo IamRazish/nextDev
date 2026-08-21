@@ -43,4 +43,7 @@ npm run build
 | Gradient Editor | `/tools/gradient-editor` | ✅ ported |
 | Neumorphism Shadow | `/tools/neumorphism-shadow` | ✅ ported |
 | Watermark Editor | `/tools/watermark-editor` | ✅ ported |
-| All-in-One Suite | `/tools/all-in-one-suite` | planned |
+
+The standalone `sp-tools` grab-bag is not a separate route: its utilities are
+covered by the seven tools above, and the home grid plus the ⌘K palette already
+do the "one place for everything" job it existed for.

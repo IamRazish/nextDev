@@ -7,7 +7,7 @@ export type Tool = {
   tagline: string;
   /** extra words the Cmd+K search should match on */
   keywords: string[];
-  category: "CSS" | "Layout" | "Images" | "Suite";
+  category: "CSS" | "Layout" | "Images";
   status: ToolStatus;
   /** emoji glyph — cheap, no icon dependency */
   glyph: string;
@@ -88,15 +88,6 @@ export const tools: Tool[] = [
     category: "Images",
     status: "live",
     glyph: "🖼️",
-  },
-  {
-    slug: "all-in-one-suite",
-    name: "All-in-One Suite",
-    tagline: "The grab-bag of smaller developer utilities.",
-    keywords: ["suite", "utilities", "misc", "sp-tools"],
-    category: "Suite",
-    status: "planned",
-    glyph: "🧰",
   },
 ];
 
